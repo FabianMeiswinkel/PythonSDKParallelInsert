@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "--filename", "input01.csv",
+                "--linecount", "100000",
+                "--chunksize", "10",
+                "--filenames", "input01.csv|input02.csv|input03.csv|input04.csv|input05.csv",
+                "--maxConcurrencyPerFile", "2",
+                "--connectionstring", ""
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
