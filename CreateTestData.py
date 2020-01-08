@@ -8,6 +8,9 @@ parser.add_argument('--filename', type=str, required=True, help='The filename of
 parser.add_argument('--linecount', type=int, required=True, help='the number of lines the geenrated CSV file will have')
 parser.add_argument('--connectionstring', type=str, required=False, help='The CosmosDB connection string')
 parser.add_argument('--chunksize', type=int, required=False, help='the chunk size used when processing the csv file')
+parser.add_argument('--database', type=str, required=False, help='The CosmosDB database the data should be ingested to')
+parser.add_argument('--container', type=str, required=False, help='The CosmosDB container/collection the data should be ingested to')
+
 args = parser.parse_args()
 
 print('Generating test data file {fn} with {l} lines'.format(fn=args.filename, l=args.linecount))

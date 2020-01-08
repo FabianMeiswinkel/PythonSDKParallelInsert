@@ -12,10 +12,12 @@
             "args": [
                 "--filename", "input01.csv",
                 "--linecount", "100000",
-                "--chunksize", "500",
-                "--filenames", "input01.csv|input02.csv|input03.csv|input04.csv|input05.csv",
-                "--maxConcurrencyPerFile", "10",
-                "--connectionstring", "AccountEndpoint=https://fabianm-abvolvo-cdb.documents.azure.com:443/;AccountKey=Kg529pEHPnTNRJDNQNi90FZOYnhoPFzb1ehSvjcgwfsCz6NVZsD4AStgmoufXxfTzBVFjyJBLOvWmFEMBsvscA==;"
+                "--chunksize", "100",
+                "--filenames", "input01.csv",//|input02.csv|input03.csv|input04.csv|input05.csv
+                "--maxConcurrencyPerFile", "200",
+                "--connectionstring", "",
+                "--database", "TestDB",
+                "--container", "TestContainer"
             ],
             "console": "integratedTerminal"
         }
