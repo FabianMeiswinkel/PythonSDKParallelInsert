@@ -10,6 +10,8 @@ parser.add_argument('--connectionstring', type=str, required=False, help='The Co
 parser.add_argument('--chunksize', type=int, required=False, help='the chunk size used when processing the csv file')
 parser.add_argument('--database', type=str, required=False, help='The CosmosDB database the data should be ingested to')
 parser.add_argument('--container', type=str, required=False, help='The CosmosDB container/collection the data should be ingested to')
+parser.add_argument('--filenames', type=str, required=False, help='The "|" delimited list of filenames of the csv files to be imported')
+parser.add_argument('--maxConcurrencyPerFile', type=int, required=False, help='the number of threads that should be used to process a single file in parallel')
 
 args = parser.parse_args()
 

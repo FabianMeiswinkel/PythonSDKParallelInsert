@@ -55,7 +55,8 @@ if __name__ == "__main__":
     print('Importing files {fn} into CosmosDB with chunk size {cs}'.format(fn=args.filenames, cs=args.chunksize))
     filenames = args.filenames.split("|")
     cpuCount = mp.cpu_count()
-    pool = mp.Pool(cpuCount)
+    poolSize = min(cpuCount, len(filenames))
+    pool = mp.Pool(poolSize)
     with pool:
         print('CPU count: {cpc}'.format(cpc=cpuCount))
 
